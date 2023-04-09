@@ -39,7 +39,6 @@ th:last-child {
 .dropdown_content {
     display: none;
     position: absolute;
-    transform: translateY(10%);
     width: auto;
     overflow: auto;
     background: var(--table-header-background);
@@ -48,6 +47,7 @@ th:last-child {
 }
 
 .cities_dropdown {
+    transform: translateY(10%);
     width: 50%;
     height: 188px;
 }
@@ -95,6 +95,23 @@ th:last-child {
 
 .triangle.rotated_triangle {
     transform: rotate(-180deg);
+}
+
+.deals_options {
+    width: 13.25%;
+    transform: translateY(-1%);
+    color: var(--black-text);
+}
+
+.deals_fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.deals_labels {
+    position: relative;
+    bottom: 100%;
 }
 
 /*.dropdown:hover .dropdown-content {*/

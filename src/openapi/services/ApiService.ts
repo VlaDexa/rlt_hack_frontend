@@ -31,42 +31,6 @@ requestBody: Filters,
     }
 
     /**
-     * Get Company
-     * @param inn 
-     * @param limit 
-     * @returns string Successful Response
-     * @throws ApiError
-     */
-    public static getCompanyApiGetCompanyPost(
-inn: number,
-limit: number,
-): CancelablePromise<Array<string>> {
-        return __request(OpenAPI, {
-            method: 'POST',
-            url: '/api/get_company',
-            query: {
-                'inn': inn,
-                'limit': limit,
-            },
-            errors: {
-                422: `Validation Error`,
-            },
-        });
-    }
-
-    /**
-     * Get Count
-     * @returns number Successful Response
-     * @throws ApiError
-     */
-    public static getCountApiGetCountPost(): CancelablePromise<number> {
-        return __request(OpenAPI, {
-            method: 'POST',
-            url: '/api/get_count',
-        });
-    }
-
-    /**
      * Get Cities
      * @param city 
      * @returns string Successful Response
@@ -84,18 +48,6 @@ city?: string,
             errors: {
                 422: `Validation Error`,
             },
-        });
-    }
-
-    /**
-     * Ping
-     * @returns any Successful Response
-     * @throws ApiError
-     */
-    public static pingApiPingGet(): CancelablePromise<any> {
-        return __request(OpenAPI, {
-            method: 'GET',
-            url: '/api/ping',
         });
     }
 

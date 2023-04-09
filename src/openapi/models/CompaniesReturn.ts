@@ -9,7 +9,6 @@ export type CompaniesReturn = {
     organization: string;
     customer_inn: string;
     main_rating: number;
-    success: number;
     percent: number;
     win_qty: number;
 };

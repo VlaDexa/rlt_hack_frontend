@@ -47,6 +47,8 @@
   --table-shadow: rgba(0, 65, 203, 0.1);
   --table-header-border: var(--base-color-white);
   --table-cell-border: var(--if-i-only-knew);
+
+  --black-text: var(--base-color-black)
 }
 
 /*@media (prefers-color-scheme: dark) {*/

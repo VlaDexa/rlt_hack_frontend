@@ -33,7 +33,7 @@ export function RatingTable(props: {inn_filter: string, upper_limit: number}) {
             <tbody className={style.tbody}>
             {
                     infos.map((el) =>
-                        <RatingLine key={el.id} inn={el.customer_inn} city={el.city} org_type={el.organization as OrganizationForm} successful_trades={el.success_deals} rating={Number(el.percent)} onlyLiked={onlyLiked}/>
+                        <RatingLine key={el.id} inn={el.customer_inn} city={el.city} org_type={el.organization as OrganizationForm} successful_trades={el.success_deals} rating={Number(el.win_qty*100)} onlyLiked={onlyLiked} add={el.main_rating}/>
                     )
             }
             </tbody>

@@ -9,7 +9,7 @@ import yellow from "./../assets/yellow_rating.svg";
 import green from "./../assets/green_rating.svg";
 import red from "./../assets/red_rating.svg";
 
-export function RatingLine({inn, city, org_type, rating, successful_trades, onlyLiked}:
+export function RatingLine({inn, city, org_type, rating, successful_trades, onlyLiked, add}:
     {
         inn: string,
         city: string,
@@ -17,6 +17,7 @@ export function RatingLine({inn, city, org_type, rating, successful_trades, only
         successful_trades: number,
         rating: number,
         onlyLiked: boolean,
+        add: number,
     }
 ) {
     const [liked, setLiked] = useState<boolean>(() => {
@@ -48,7 +49,10 @@ export function RatingLine({inn, city, org_type, rating, successful_trades, only
                 {successful_trades}
             </td>
             <td>
-                <div className={`${styles.rating} ${rating > 100 ? styles.green : rating > 0 ? styles.yellow: styles.red}`}><img src={rating > 100 ? green : rating > 0 ? yellow: red} alt={""}/>{rating}%</div>
+                <div className={`${styles.rating} ${rating > 50 ? styles.green : rating > 30 ? styles.yellow: styles.red}`}><img src={rating > 50 ? green : rating > 30 ? yellow: red} alt={""}/>{rating}%</div>
+            </td>
+            <td>
+                {add}
             </td>
             <td>
                 <img src={liked ? filled_heart: heart} alt={"Лайкнуть"} onClick={() => setLikedAndStore(!liked)}/>
