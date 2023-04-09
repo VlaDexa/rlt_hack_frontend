@@ -1,0 +1,120 @@
+@import "../index.css";
+
+.rating-wrapper {
+    margin: 0 auto;
+    background: var(--our-sector-color);
+}
+
+.rating {
+}
+
+.route {
+    position: relative;
+    display: grid;
+    grid-auto-columns: fit-content(400px) 30px fit-content(400px);
+}
+
+.prev-route {
+    grid-column: 1;
+    color: var(--gray-text-color);
+}
+
+.arrow {
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 50%;
+    /*transform: scale(calc(2/3), calc(2/3));*/
+}
+
+.current-route {
+    grid-column: 3;
+}
+
+.rating-title {
+    margin-top: 33px;
+}
+
+.button-my {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    gap: 8px;
+    border-radius: 8px;
+    color: var(--elevated-button-text);
+}
+
+.button-my:hover {
+    color: var(--elevated-button-text);
+}
+
+.button-my:not(.pressed) {
+    background: var(--elevated-default-background);
+}
+
+.button-my.pressed {
+    background: var(--not-primary-pressed);
+    box-shadow: none;
+}
+
+.search-line {
+    margin-top: 2%;
+    display: flex;
+}
+
+.order-switcher {
+    margin-top: 30px;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.rating-input {
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.rating-input, .search-button {
+    height: 48px !important;
+}
+
+.search-button {
+    transform: scale(90%) translateX(-107.5%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+    border-radius: 8px;
+    background: var(--base-color-blue);
+}
+
+.magn-glass {
+    position: relative;
+    right: 10%;
+}
+
+/*.prev-route {*/
+/*    position: absolute;*/
+/*    width: 59px;*/
+/*    height: 24px;*/
+/*    left: 105px;*/
+/*    top: 136px;*/
+/*    color: var(--base-color-grey);*/
+/*}*/
+
+/*.arrow {*/
+/*    position: relative;*/
+/*    left: 8.5%;*/
+/*    top: 13px;*/
+/*}*/
+
+/*.current-route {*/
+/*    position: absolute;*/
+/*    width: 269px;*/
+/*    height: 24px;*/
+/*    left: 189px;*/
+/*    top: 136px;*/
+/*}*/

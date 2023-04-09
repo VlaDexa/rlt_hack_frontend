@@ -1,0 +1,29 @@
+@import "./../index.css";
+
+.row {
+    padding-top: 100px;
+    background: var(--table-cells-background);
+    box-shadow: 0 8px 24px var(--table-shadow);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.row td {
+    height: 58px;
+    vertical-align: middle;
+    border-right: 1px solid var(--table-cell-border);
+}
+
+.row td:last-child {
+    border-right: none;
+    border-radius: 0 8px 8px 0;
+}
+
+.row td:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.mini_logo {
+    position: relative;
+    right: 7px;
+}
