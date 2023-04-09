@@ -69,14 +69,32 @@ th:last-child {
     height: 33px;
     padding-left: 2%;
     padding-top: 0.5%;
+    margin-bottom: 0;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
 }
+.cities_option.selected {
+    color: var(--main-text-color);
+    background: var(--main-button-background);
+}
+
+.cities_option.selected:hover {
+    background: var(--main-button-background);
+}
 
 .cities_option:hover {
     background: var(--table-cell-border);
+}
+
+.triangle {
+    margin-left: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.triangle.rotated_triangle {
+    transform: rotate(-180deg);
 }
 
 /*.dropdown:hover .dropdown-content {*/

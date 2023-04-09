@@ -7,8 +7,9 @@ export type Filters = {
     limit: number;
     rating?: boolean;
     cities?: Array<string>;
-    organization?: string;
+    iporul?: string;
     lower_trade_limit?: number;
     upper_trade_limit?: number;
-    customer_inn?: number;
+    inn?: number;
+    rating_by_deals?: boolean;
 };

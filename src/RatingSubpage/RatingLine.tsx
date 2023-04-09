@@ -4,14 +4,19 @@ import styles from "./RatingLine.module.css";
 import map_point from "./../assets/map_point.svg"
 import hammer from "./../assets/hammer.svg";
 import {useState} from "react";
+import {OrganizationForm} from "./RatingTable";
+import yellow from "./../assets/yellow_rating.svg";
+import green from "./../assets/green_rating.svg";
+import red from "./../assets/red_rating.svg";
 
-export function RatingLine({inn, city, org_type, rating, successful_trades}:
+export function RatingLine({inn, city, org_type, rating, successful_trades, onlyLiked}:
     {
-        inn: number,
+        inn: string,
         city: string,
-        org_type: string,
+        org_type: OrganizationForm,
         successful_trades: number,
-        rating: number
+        rating: number,
+        onlyLiked: boolean,
     }
 ) {
     const [liked, setLiked] = useState<boolean>(() => {
@@ -24,6 +29,8 @@ export function RatingLine({inn, city, org_type, rating, successful_trades}:
         localStorage.setItem(inn.toString(), liked ? "true" : "false");
     }
 
+    if (onlyLiked && !liked) return (<div></div>);
+
     return (
         <tr className={styles.row}>
             <td>
@@ -34,17 +41,17 @@ export function RatingLine({inn, city, org_type, rating, successful_trades}:
                 {city}
             </td>
             <td>
-                {org_type}
+                {org_type == OrganizationForm.UL ? "Юридическое лицо" : "ИП"}
             </td>
             <td>
                 <img className={styles.mini_logo} src={hammer} alt={""}/>
                 {successful_trades}
             </td>
             <td>
-                {rating}
+                <div className={`${styles.rating} ${rating > 100 ? styles.green : rating > 0 ? styles.yellow: styles.red}`}><img src={rating > 100 ? green : rating > 0 ? yellow: red} alt={""}/>{rating}%</div>
             </td>
             <td>
-                <img src={liked ? filled_heart: heart} alt={"Лайкнуть"} onClick={(event) => setLikedAndStore(!liked)}/>
+                <img src={liked ? filled_heart: heart} alt={"Лайкнуть"} onClick={() => setLikedAndStore(!liked)}/>
             </td>
         </tr>
     )

@@ -7,6 +7,9 @@ export type CompaniesReturn = {
     city: string;
     success_deals: number;
     organization: string;
-    customer_inn: number;
+    customer_inn: string;
     main_rating: number;
+    success: number;
+    percent: number;
+    win_qty: number;
 };

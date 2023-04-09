@@ -12,12 +12,12 @@ export function Header() {
 
                 <nav className="header-menu menu header-menu-main">
                     <ul className="menu__list">
-                        <li className="menu__block block__active">
+                        <li className="menu__block">
                             <span className="menu__category" tabIndex={0}>Торги</span>
                             <div className="menu__submenu-container">
                                 <ul className="menu__submenu">
                                     <li className="menu__item">
-                                        <a className="menu__link is-active" href="https://www.roseltorg.ru/procedures/search"
+                                        <a className="menu__link" href="https://www.roseltorg.ru/procedures/search"
                                            data-drupal-link-system-path="procedures/search">Все процедуры</a>
                                     </li>
                                     <li className="menu__item">
@@ -156,7 +156,7 @@ export function Header() {
                             </div>
                         </li>
 
-                        <li className="menu__block">
+                        <li className="menu__block block__active">
                             <span className="menu__category" tabIndex={0}>Клиентам</span>
                             <div className="menu__submenu-container">
                                 <ul className="menu__submenu">
@@ -178,9 +178,13 @@ export function Header() {
                                         <a className="menu__link" href="https://www.roseltorg.ru/property-sellers"
                                            data-drupal-link-system-path="property-sellers">Стать продавцом</a>
                                     </li>
-                                    <li className="menu__item">
+                                    <li className="menu__item ">
                                         <a className="menu__link" href="https://www.roseltorg.ru/rates"
                                            data-drupal-link-system-path="rates">Тарифы</a>
+                                    </li>
+                                    <li className="menu__item ">
+                                        <a className="menu__link is-active" href="https://www.roseltorg.ru/rates"
+                                           data-drupal-link-system-path="rates">Рейтинг заказчиков и поставщиков</a>
                                     </li>
                                     <li className="menu__item last__item">
                                         <a className="menu__link" rel="nofollow" href="#">Еще</a>

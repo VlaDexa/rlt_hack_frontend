@@ -37,12 +37,12 @@ requestBody: Filters,
      * @returns string Successful Response
      * @throws ApiError
      */
-    public static getCompanyApiGetCompanyGet(
+    public static getCompanyApiGetCompanyPost(
 inn: number,
 limit: number,
 ): CancelablePromise<Array<string>> {
         return __request(OpenAPI, {
-            method: 'GET',
+            method: 'POST',
             url: '/api/get_company',
             query: {
                 'inn': inn,
@@ -59,9 +59,9 @@ limit: number,
      * @returns number Successful Response
      * @throws ApiError
      */
-    public static getCountApiGetCountGet(): CancelablePromise<number> {
+    public static getCountApiGetCountPost(): CancelablePromise<number> {
         return __request(OpenAPI, {
-            method: 'GET',
+            method: 'POST',
             url: '/api/get_count',
         });
     }
@@ -72,11 +72,11 @@ limit: number,
      * @returns string Successful Response
      * @throws ApiError
      */
-    public static getCitiesApiGetAllCitiesGet(
+    public static getCitiesApiGetAllCitiesPost(
 city?: string,
 ): CancelablePromise<Array<string>> {
         return __request(OpenAPI, {
-            method: 'GET',
+            method: 'POST',
             url: '/api/get_all_cities',
             query: {
                 'city': city,
@@ -92,9 +92,9 @@ city?: string,
      * @returns any Successful Response
      * @throws ApiError
      */
-    public static pingApiPingPost(): CancelablePromise<any> {
+    public static pingApiPingGet(): CancelablePromise<any> {
         return __request(OpenAPI, {
-            method: 'POST',
+            method: 'GET',
             url: '/api/ping',
         });
     }
